@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coorchice.library.SuperTextView
+    android:textSize="14sp"
+    android:paddingRight="20dp"
+    android:paddingLeft="20dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_tag"
+    app:stv_solid="#f8f8f8"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="20dp"
+    app:stv_corner="16dp"
+    app:stv_stroke_width="1dp"
+    android:gravity="center"
+    app:stv_stroke_color="#C7C7C7"
+    android:layout_marginRight="10dp"
+    android:background="@color/white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="200ML"
+    android:textColor="@color/color_333"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+</com.coorchice.library.SuperTextView>

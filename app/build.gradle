@@ -86,5 +86,10 @@ dependencies {
     implementation 'com.ryan.rv_gallery:rv-gallery:1.1.2'
     implementation 'com.github.nikartm:process-button:1.0.1'
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-21'
+    implementation 'com.github.iwgang:countdownview:2.1.6'
+    implementation 'jp.wasabeef:glide-transformations:3.0.1'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'com.blankj:utilcode:1.25.9'
+
     implementation files('libs/tbs_sdk_thirdapp_v4.3.0.1148_43697_sharewithdownloadwithfile_withoutGame_obfs_20190805_175505.jar')
 }

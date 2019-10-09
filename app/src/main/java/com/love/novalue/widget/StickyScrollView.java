@@ -7,12 +7,15 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v4.widget.NestedScrollView;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
+import android.widget.ScrollView;
 
 import com.love.novalue.R;
 
@@ -48,7 +51,53 @@ public class StickyScrollView extends NestedScrollView {
 
     private int mShadowHeight;
     private Drawable mShadowDrawable;
+    private ScrollViewListener scrollViewListener = null;
+    private int handlerWhatId = 65984;
+    private int timeInterval = 20;
+    private int lastY = 0;
+    Handler handler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            if (msg.what == handlerWhatId) {
+                if (lastY == getScrollY()) {
+                    if (scrollViewListener != null) {
+                        scrollViewListener.onScrollStop(true);
+                    }
+                } else {
+                    if (scrollViewListener != null) {
+                        scrollViewListener.onScrollStop(false);
+                    }
+                    handler.sendMessageDelayed(handler.obtainMessage(handlerWhatId, this), timeInterval);
+                    lastY = getScrollY();
+                }
+            }
+        }
+    };
 
+    public void setScrollViewListener(ScrollViewListener scrollViewListener) {
+        this.scrollViewListener = scrollViewListener;
+    }
+
+    public interface ScrollViewListener {
+        /**
+         * 滑动监听
+         *
+         * @param scrollView ScrollView控件
+         * @param x          x轴坐标
+         * @param y          y轴坐标
+         * @param oldx       上一个x轴坐标
+         * @param oldy       上一个y轴坐标
+         */
+        void onScrollChanged(NestedScrollView scrollView, int x, int y, int oldx, int oldy);
+
+        /**
+         * 是否滑动停止
+         *
+         * @param isScrollStop true:滑动停止;false:未滑动停止
+         */
+        void onScrollStop(boolean isScrollStop);
+    }
     private final Runnable invalidateRunnable = new Runnable() {
 
         @Override
@@ -270,13 +319,18 @@ public class StickyScrollView extends NestedScrollView {
         if (ev.getAction() == MotionEvent.ACTION_UP || ev.getAction() == MotionEvent.ACTION_CANCEL) {
             hasNotDoneActionDown = true;
         }
-
+        if (ev.getAction() == MotionEvent.ACTION_UP) {
+            handler.sendMessageDelayed(handler.obtainMessage(handlerWhatId, this), timeInterval);
+        }
         return super.onTouchEvent(ev);
     }
 
     @Override
     protected void onScrollChanged(int l, int t, int oldl, int oldt) {
         super.onScrollChanged(l, t, oldl, oldt);
+        if (scrollViewListener != null) {
+            scrollViewListener.onScrollChanged(this, l, t, oldl, oldt);
+        }
         doTheStickyThing();
     }
 

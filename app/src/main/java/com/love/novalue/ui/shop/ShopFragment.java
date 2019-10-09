@@ -1,11 +1,15 @@
 package com.love.novalue.ui.shop;
 
 
+import android.annotation.TargetApi;
 import android.content.Intent;
 import android.content.res.TypedArray;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.NestedScrollView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -15,6 +19,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.coorchice.library.utils.LogUtils;
@@ -48,12 +53,17 @@ import com.love.novalue.net.NetUtils;
 import com.love.novalue.net.OnMessageReceived;
 import com.love.novalue.tools.GlideImageLoader;
 import com.love.novalue.tools.GsonUtil;
+import com.love.novalue.tools.TimeUtil;
 import com.love.novalue.ui.home.HomeFragment;
 import com.love.novalue.ui.home.HomeMsgActivity;
 import com.love.novalue.ui.login.LoginQrcodeActivity;
 import com.love.novalue.ui.mine.MyBalanceActivity;
 import com.love.novalue.widget.MyGridView;
+import com.love.novalue.widget.StickyScrollView;
 import com.lzy.okgo.model.HttpParams;
+import com.scwang.smartrefresh.layout.SmartRefreshLayout;
+import com.scwang.smartrefresh.layout.api.RefreshLayout;
+import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
@@ -72,6 +82,7 @@ import java.util.Map;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import cn.iwgang.countdownview.CountdownView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -88,6 +99,12 @@ public class ShopFragment extends ImmersionFragment {
     Banner mBanner;
     @BindView(R.id.gv_hot)
     MyGridView gvChannel;
+    @BindView(R.id.tv_status)
+    TextView tvStatus;
+    @BindView(R.id.cv_kill)
+    CountdownView countdownView;
+    @BindView(R.id.refresh)
+    SmartRefreshLayout smartRefreshLayout;
     @BindView(R.id.rl_balance)
     RelativeLayout rl_balance;
     List<String> images;
@@ -100,6 +117,8 @@ public class ShopFragment extends ImmersionFragment {
     GoodsTypeAdapter goodsTypeAdapter;
     ShopHotAdapter shopHotAdapter;
     int currentSelect=0;
+    int page=1;
+    String status="0";
     public ShopFragment() {
         // Required empty public constrrv_goodsuctor
     }
@@ -117,18 +136,26 @@ public class ShopFragment extends ImmersionFragment {
     }
 
     private void initView() {
-
+        smartRefreshLayout.setOnLoadMoreListener(new OnLoadMoreListener() {
+            @Override
+            public void onLoadMore(@NonNull RefreshLayout refreshLayout) {
+                page++;
+                getShopGoods();
+            }
+        });
         initGoods();
         initKillTime();
         initBanner();
         initGoodsType();
         initChannel();
         getRealData();
+
     }
     private void getRealData(){
         getBanners();//获取轮播图
         getChannel();//获取频道
         getGoodsCategory();//获取分类
+        getShopGoods();
     }
     @OnClick({R.id.iv_ear,R.id.ll_search,R.id.rl_msg,R.id.rl_shopcar,R.id.rl_balance,R.id.ll_category})
     void OnClick(View view){
@@ -169,32 +196,32 @@ public class ShopFragment extends ImmersionFragment {
             }
         });
     }
-    //初始化秒杀时间
-    private void initKillTime() {
-        killTimes = new ArrayList<>();
-
-
+    private void setTime(){
         Calendar cal = Calendar.getInstance();// 当前日期
         int hour = cal.get(Calendar.HOUR_OF_DAY);// 获取小时
         Log.e("Hour",hour+"hour");
 
         if(hour<10){
+            tvStatus.setText("距开始");
+            countdownView.start(TimeUtil.getTypeTime(1));
             killTimes.add(new KillTime("10:00", 0));
             killTimes.add(new KillTime("13:00", 0));
             killTimes.add(new KillTime("18:00", 0));
             killTimes.add(new KillTime("21:00", 3));
         }else{
-            if(hour<=13) {
+            tvStatus.setText("距结束");
+            countdownView.start(TimeUtil.getTypeTime(4));
+            if(hour<13) {
                 killTimes.add(new KillTime("10:00", 2));
                 killTimes.add(new KillTime("13:00", 0));
                 killTimes.add(new KillTime("18:00", 0));
                 killTimes.add(new KillTime("21:00", 0));
-            }else if(hour<=18) {
+            }else if(hour<18) {
                 killTimes.add(new KillTime("10:00", 1));
                 killTimes.add(new KillTime("13:00", 2));
                 killTimes.add(new KillTime("18:00", 0));
                 killTimes.add(new KillTime("21:00", 0));
-            }else if(hour<=21){
+            }else if(hour<21){
                 killTimes.add(new KillTime("10:00", 1));
                 killTimes.add(new KillTime("13:00", 1));
                 killTimes.add(new KillTime("18:00", 2));
@@ -206,17 +233,96 @@ public class ShopFragment extends ImmersionFragment {
                 killTimes.add(new KillTime("21:00", 2));
             }
         }
+    }
+    //初始化秒杀时间
+    private void initKillTime() {
+        killTimes = new ArrayList<>();
+        setTime();
         killTimeAdapter = new NewKillTimeAdapter(getContext(),killTimes);
         killTimeAdapter.setPos(currentSelect);
         gvKill.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if(currentSelect==position){
+                    return;
+                }
+                KillTime killTime=killTimes.get(position);
                 currentSelect=position;
                 killTimeAdapter.setPos(currentSelect);
                 killTimeAdapter.notifyDataSetChanged();
+                switch (position){
+                    case 0:
+                        status="0";
+                        if(killTime.getStatus()==0){
+                            tvStatus.setText("距开始");
+                            countdownView.stop();
+                            countdownView.start(TimeUtil.getTypeTime(0));
+                        }else{
+                            tvStatus.setText("距结束");
+                            countdownView.stop();
+                            countdownView.start(TimeUtil.getTypeTime(4));
+                        }
+                        break;
+                    case 1:
+                        status="1";
+                        if(killTime.getStatus()==0){
+                            tvStatus.setText("距开始");
+                            countdownView.stop();
+                            countdownView.start(TimeUtil.getTypeTime(1));
+                        }else{
+                            tvStatus.setText("距结束");
+                            countdownView.stop();
+                            countdownView.start(TimeUtil.getTypeTime(4));
+                        }
+                        break;
+                    case 2:
+                        status="2";
+                        if(killTime.getStatus()==0){
+                            tvStatus.setText("距开始");
+                            countdownView.stop();
+                            countdownView.start(TimeUtil.getTypeTime(2));
+                        }else{
+                            tvStatus.setText("距结束");
+                            countdownView.stop();
+                            countdownView.start(TimeUtil.getTypeTime(4));
+                        }
+
+                        break;
+                    case 3:
+                        status="3";
+                        if(killTime.getStatus()==0){
+                            tvStatus.setText("距开始");
+                            countdownView.stop();
+                            countdownView.start(TimeUtil.getTypeTime(3));
+                        }else{
+                            tvStatus.setText("距结束");
+                            countdownView.stop();
+                            countdownView.start(TimeUtil.getTypeTime(4));
+                        }
+
+                        break;
+                }
+                homeGoods.clear();
+                page=1;
+                getShopGoods();
+
+
             }
         });
         gvKill.setAdapter(killTimeAdapter);
+        countdownView.setOnCountdownEndListener(new CountdownView.OnCountdownEndListener() {
+            @Override
+            public void onEnd(CountdownView cv) {
+                killTimes.clear();
+                setTime();
+                killTimeAdapter.setPos(0);
+                killTimeAdapter.notifyDataSetChanged();
+                page=1;
+                homeGoods.clear();
+                getShopGoods();
+                status="0";
+            }
+        });
     }
     //初始化轮播图
     private void initBanner() {
@@ -258,21 +364,24 @@ public class ShopFragment extends ImmersionFragment {
                 startActivity(intent);
             }
         });
-
+        rvType.setNestedScrollingEnabled(false);
         rvType.setLayoutManager(linearLayoutManager);
         rvType.setAdapter(goodsTypeAdapter);
     }
     //初始化秒杀列表
+    @TargetApi(Build.VERSION_CODES.M)
     private void initGoods() {
         homeGoods=new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            homeGoods.add(new ShopGoods());
-        }
         homeGoodsAdapter=new ShopGoodsAdapter(homeGoods);
         homeGoodsAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-                startActivity(new Intent(getContext(),ShopDetailActivity.class));
+                Intent intent =new Intent(getContext(),ShopDetailActivity.class);
+                ShopGoods shopGoods= (ShopGoods) adapter.getItem(position);
+                intent.putExtra("id",shopGoods.getId());
+                intent.putExtra("status",killTimes.get(currentSelect).getStatus()+"");
+                intent.putExtra("pos",currentSelect);
+                startActivity(intent);
             }
         });
         rv_goods.setLayoutManager(new LinearLayoutManager(getContext()){
@@ -283,14 +392,51 @@ public class ShopFragment extends ImmersionFragment {
                 return false;
             }
         });
-
         rv_goods.setNestedScrollingEnabled(false);
-        rv_goods.setHasFixedSize(true);
-
-        rv_goods.setFocusable(false);
         rv_goods.setAdapter(homeGoodsAdapter);
-    }
 
+    }
+    private void getShopGoods(){
+        Map<String,Object> httpParams=new HashMap<>();
+        httpParams.put("status",status);
+        httpParams.put("limit",10);
+        httpParams.put("page",page);
+        final String json=new Gson().toJson(httpParams);
+
+        NetUtils.getInstance().post(Api.Shop.getGoodsBack, json, new OnMessageReceived() {
+            @Override
+            public void onSuccess(String response) {
+                LogUtils.e(response);
+                smartRefreshLayout.finishLoadMore();
+                try {
+                    JSONObject jsonObject=new JSONObject(response);
+                    int code=jsonObject.getInt("resultCode");
+                    if(code==0){
+                        jsonObject=jsonObject.getJSONObject("data");
+                        JSONArray array=jsonObject.getJSONArray("list");
+                        List<ShopGoods> shopGoodsList=new ArrayList<>();
+                        for (int i = 0; i <array.length() ; i++) {
+                            JSONObject item=array.getJSONObject(i);
+                            ShopGoods shopCategory=new Gson().fromJson(item.toString(),ShopGoods.class);
+                            shopCategory.setTimeStatus(killTimes.get(currentSelect).getStatus());
+                            shopGoodsList.add(shopCategory);
+
+                        }
+                        homeGoods.addAll(shopGoodsList);
+                        homeGoodsAdapter.setNewData(homeGoods);
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+
+            @Override
+            public void onError(String error) {
+
+            }
+        });
+    }
     private void getGoodsCategory(){
         Map<String,Object> httpParams=new HashMap<>();
         httpParams.put("isBan","0");

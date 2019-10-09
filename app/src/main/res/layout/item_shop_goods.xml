@@ -10,10 +10,13 @@
     android:background="@drawable/shape_home_white8"
     android:orientation="vertical">
 
-    <ImageView
+    <com.makeramen.roundedimageview.RoundedImageView
+        app:riv_corner_radius_top_left="8dp"
+        app:riv_corner_radius_top_right="8dp"
+        android:id="@+id/iv_logo"
         android:layout_width="match_parent"
         android:layout_height="144dp"
-        android:scaleType="centerCrop"
+        android:scaleType="fitXY"
         android:src="@drawable/sl_shop_good8" />
 
     <LinearLayout
@@ -25,6 +28,7 @@
 
 
         <TextView
+            android:id="@+id/tv_name"
             android:textColor="@color/color_333"
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
@@ -58,6 +62,7 @@
                     android:textSize="11sp" />
 
                 <TextView
+                    android:id="@+id/tv_get"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/shape_goods_money"
@@ -71,6 +76,7 @@
                     android:textSize="11sp" />
             </LinearLayout>
             <TextView
+                android:id="@+id/tv_sale"
                 android:layout_marginRight="16dp"
                 android:layout_alignParentRight="true"
                 android:layout_width="wrap_content"
@@ -93,15 +99,24 @@
                 android:gravity="center"
                 android:text="￥"
                 android:textColor="@color/color_red"
-                android:textSize="14sp" />
+                android:textSize="12sp" />
 
             <TextView
+                android:id="@+id/tv_real_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="168.8"
                 android:textColor="@color/color_red"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/tv_cheap_price"
+                android:layout_marginLeft="5dp"
+                android:textColor="#ABABAB"
+                android:textSize="12sp"
+                android:text="￥123"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
         </LinearLayout>
 
         <RelativeLayout
@@ -121,6 +136,7 @@
                     android:layout_width="16dp"
                     android:layout_height="16dp" />
                 <TextView
+                    android:id="@+id/tv_share"
                     android:layout_marginRight="12dp"
                     android:textSize="@dimen/sp_14"
                     android:layout_marginLeft="8dp"

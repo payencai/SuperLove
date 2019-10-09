@@ -14,6 +14,8 @@ public class Api {
         public static final String getCategory = BASE_URL + "/category/api/list";//获取商城商品分类
         public static final String getHotAndNine = BASE_URL + "/api/channel/list";//获取商城频道
         public static final String getBanners = BASE_URL + "/adsCarousel/list";//获取商城轮播图
+        public static final String getGoodsBack = BASE_URL + "/api/product/get/list/backups";//获取商城抢购商品列表
+        public static final String getDetail = BASE_URL + "/api/product/get/detail";//获取商城抢购商品详情
     }
 
 }
