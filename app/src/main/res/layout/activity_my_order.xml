@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.mine.MyOrderActivity">
+     <RelativeLayout
+         android:background="@color/white"
+         android:layout_width="match_parent"
+         android:layout_height="50dp">
+         <ImageView
+             android:id="@+id/iv_back"
+             android:padding="15dp"
+             android:src="@mipmap/sl_black_back"
+             android:layout_width="50dp"
+             android:layout_height="50dp" />
+         <TextView
+             android:textStyle="bold"
+             android:textColor="@color/color_333"
+             android:textSize="18sp"
+             android:layout_centerInParent="true"
+             android:text="我的订单"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content" />
+     </RelativeLayout>
+    <LinearLayout
+        android:background="#f8f8f8"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/shape_home_white8"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:textSize="17sp"
+                android:textColor="@color/color_333"
+                android:text="电商购物返佣订单"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/sl_balck_enter"
+                android:layout_width="9dp"
+                android:layout_height="16dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_love"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/shape_home_white8"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:textSize="17sp"
+                android:textColor="@color/color_333"
+                android:text="爱无价优选自营订单"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/sl_balck_enter"
+                android:layout_width="9dp"
+                android:layout_height="16dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/shape_home_white8"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:textSize="17sp"
+                android:textColor="@color/color_333"
+                android:text="生活服务订单"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/sl_balck_enter"
+                android:layout_width="9dp"
+                android:layout_height="16dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/shape_home_white8"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:textSize="17sp"
+                android:textColor="@color/color_333"
+                android:text="订单找回"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/sl_balck_enter"
+                android:layout_width="9dp"
+                android:layout_height="16dp" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

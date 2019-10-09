@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f5"
+    tools:context=".ui.home.category.JuhuasuanActivity">
+    <FrameLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@mipmap/sl_home_jd"
+            android:layout_width="match_parent"
+            android:layout_height="220dp">
+            <RelativeLayout
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <ImageView
+                    android:padding="15dp"
+                    android:src="@mipmap/sl_white_back"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/white"
+                    android:textSize="21sp"
+                    android:text="京东"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:padding="15dp"
+                    android:src="@mipmap/sl_white_search"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+            </RelativeLayout>
+            <com.liang.widget.JTabLayout
+                android:id="@+id/jtab"
+                android:background="#00000000"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:tabMode="scrollable"
+
+                app:tabScaleTransitionScroll="1.2"
+                app:tabIndicatorColor="@color/white"
+                app:tabIndicatorFullWidth="false"
+                app:tabIndicatorHeight="3dp"
+                app:tabIndicatorTransitionScroll="true"
+                app:tabIndicatorWidth="30dp"
+                app:tabTextColor="@drawable/text_color_home_white" />
+
+        </LinearLayout>
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_marginTop="140dp"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.youth.banner.Banner
+
+                    app:scroll_time="500"
+                    app:indicator_margin="5dp"
+                    app:indicator_height="5dp"
+                    app:indicator_width="20dp"
+                    app:indicator_drawable_unselected="@drawable/bg_banner_unselect"
+                    android:id="@+id/banner"
+                    app:indicator_drawable_selected="@drawable/bg_banner_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="142dp"
+                    app:is_auto_play="true" />
+                <View
+                    android:background="@color/color_f5"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"></View>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_goods"
+
+                    tools:listitem="@layout/item_today_hot3"
+                    android:layout_marginBottom="20dp"
+
+                    android:background="@color/color_f5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="5dp"
+
+    android:layout_height="wrap_content">
+    <com.coorchice.library.SuperTextView
+        android:text="亲子"
+        android:layout_marginTop="10dp"
+        android:layout_centerInParent="true"
+        android:textSize="14sp"
+        android:textStyle=""
+        android:id="@+id/tv_name"
+        android:layout_marginBottom="10dp"
+        app:stv_corner="25dp"
+        android:gravity="center"
+        app:stv_solid="@color/color_red"
+        android:textColor="@color/white"
+        android:layout_width="80dp"
+        android:layout_height="30dp" />
+</RelativeLayout>

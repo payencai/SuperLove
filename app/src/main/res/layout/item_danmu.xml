@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:gravity="center_vertical"
+    android:background="@drawable/shape_dangmu"
+    android:layout_height="30dp">
+    <ImageView
+        android:src="@mipmap/sl_default_head"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:text="测试弹幕"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

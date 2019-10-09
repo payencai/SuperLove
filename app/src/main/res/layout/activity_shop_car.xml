@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f5f5f5"
+    tools:context=".ui.shop.ShopCarActivity">
+
+        <RelativeLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <ImageView
+                android:id="@+id/iv_back"
+                android:padding="15dp"
+                android:src="@mipmap/sl_grey_back"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+            <TextView
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/color_333"
+                android:text="购物车"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.love.novalue.widget.StickyScrollView
+                android:layout_width="match_parent"
+                android:layout_above="@id/rl_bottom"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        tools:itemCount="3"
+                        android:id="@+id/rv_shopcar"
+                        tools:listitem="@layout/item_shopcar"
+                        android:layout_height="wrap_content">
+
+                    </android.support.v7.widget.RecyclerView>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+                        <LinearLayout
+                            android:gravity="center_vertical"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <View
+                                android:background="#c4c4c4"
+                                android:layout_width="30dp"
+                                android:layout_height="1dp"></View>
+                            <TextView
+                                android:layout_marginRight="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:textColor="@color/color_red"
+                                android:textSize="17sp"
+                                android:text="猜你喜欢"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <View
+                                android:background="#c4c4c4"
+                                android:layout_width="30dp"
+                                android:layout_height="1dp"></View>
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        tools:itemCount="1"
+                        android:id="@+id/rv_goods"
+                        tools:listitem="@layout/item_shopcar_goods"
+                        android:layout_height="wrap_content">
+
+                    </android.support.v7.widget.RecyclerView>
+                </LinearLayout>
+            </com.love.novalue.widget.StickyScrollView>
+            <RelativeLayout
+                android:id="@+id/rl_bottom"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <LinearLayout
+                    android:layout_marginLeft="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@mipmap/sl_shopcar_unchoose"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp" />
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:textSize="14sp"
+                        android:textColor="#474747"
+                        android:text="全选"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="14sp"
+                        android:textColor="#FF101010"
+                        android:text="合计："
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:textStyle="bold"
+
+                        android:textSize="11sp"
+                        android:textColor="#FFFE3F49"
+                        android:text="￥"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:textSize="17sp"
+                        android:textColor="#FFFE3F49"
+                        android:text="168"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <com.coorchice.library.SuperTextView
+                        app:stv_solid="#FFF82732"
+                        android:text="去结算(1)"
+                        android:id="@+id/tv_submit"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="15sp"
+                        app:stv_corner="17dp"
+                        android:gravity="center"
+                        android:paddingRight="10dp"
+                        android:textColor="@color/white"
+                        android:paddingLeft="11dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+</LinearLayout>

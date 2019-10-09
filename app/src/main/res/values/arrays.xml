@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="home_labels">
+        <item>京东</item>
+        <item>天猫</item>
+        <item>优选</item>
+        <item>美团</item>
+        <item>拼多多</item>
+        <item>携程</item>
+        <item>今日推荐</item>
+        <item>每日爆款</item>
+        <item>9.9包邮</item>
+        <item>聚划算</item>
+
+        <item>淘宝</item>
+        <item>飞猪</item>
+        <item>天猫国际</item>
+        <item>天猫超市</item>
+        <item>限时抢购</item>
+        <item>充值</item>
+        <item>油卡</item>
+    </array>
+    <string-array name="week">
+        <item >星期一</item>
+        <item >星期二</item>
+        <item >星期三</item>
+        <item >星期四</item>
+        <item >星期五</item>
+        <item >星期六</item>
+        <item >星期天</item>
+    </string-array>
+
+    <array name="home_icon">
+
+        <item>@drawable/sl_home2</item> //京东
+        <item>@drawable/sl_home7</item>//天猫
+        <item>@drawable/sl_home9</item>//优选
+        <item>@drawable/sl_home5</item> //美团
+        <item>@drawable/sl_home6</item> //拼多多
+        <item>@drawable/sl_home8</item>//携程
+        <item>@drawable/sl_hom1</item> //今日推荐
+        <item>@drawable/sl_home4</item> //今日爆款
+        <item>@drawable/sl_home10</item>//9.9
+        <item>@drawable/sl_home3</item>//聚划算
+
+        <item>@drawable/sl_taobao</item> //
+        <item>@drawable/sl_feizhu</item>//
+        <item>@drawable/sl_guoji</item>
+        <item>@drawable/sl_chaoshi</item>//
+        <item>@drawable/sl_xianshi</item>
+        <item>@drawable/sl_home_chongzhi</item>
+        <item>@drawable/sl_home_youka</item>
+    </array>
+</resources>
+

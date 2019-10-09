@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_marginRight="10dp"
+    android:layout_height="100dp">
+    <ImageView
+        android:id="@+id/iv_photo"
+        android:src="@mipmap/sl_share_goods"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <ImageView
+        android:id="@+id/iv_select"
+        android:src="@mipmap/sl_photo_check"
+        android:layout_margin="5dp"
+        android:layout_gravity="right"
+        android:layout_width="22dp"
+        android:layout_height="22dp" />
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_tag"
+        android:background="#FE3F49"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:text="二维码推广图"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="22dp" />
+</FrameLayout>

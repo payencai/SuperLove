@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="true"
+    tools:context=".ui.MainActivity">
+
+   <FrameLayout
+       android:layout_marginBottom="50dp"
+       android:id="@+id/fr_container"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+   </FrameLayout>
+   <RelativeLayout
+       android:id="@+id/ll_bottom"
+       android:background="@mipmap/sl_new_line"
+       android:layout_alignParentBottom="true"
+       android:orientation="vertical"
+       android:layout_width="match_parent"
+       android:layout_height="60dp">
+
+       <LinearLayout
+           android:background="@color/color_white"
+           android:layout_alignParentBottom="true"
+           android:layout_width="match_parent"
+           android:layout_height="50dp">
+           <RelativeLayout
+               android:id="@+id/rl_home"
+               android:layout_weight="1"
+               android:layout_width="0dp"
+               android:layout_height="match_parent">
+               <LinearLayout
+                   android:layout_centerInParent="true"
+                   android:orientation="vertical"
+                   android:gravity="center_horizontal"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+                   <ImageView
+                       android:id="@+id/iv_home"
+                       android:src="@mipmap/sl_select_home"
+                       android:layout_width="22dp"
+                       android:layout_height="22dp" />
+                   <TextView
+
+                       android:layout_marginTop="3dp"
+                       android:textSize="10sp"
+                       android:textColor="@color/color_333"
+                       android:text="首页"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content" />
+               </LinearLayout>
+           </RelativeLayout>
+           <RelativeLayout
+               android:id="@+id/rl_shop"
+               android:layout_weight="1"
+               android:layout_width="0dp"
+               android:layout_height="match_parent">
+               <LinearLayout
+                   android:layout_centerInParent="true"
+                   android:orientation="vertical"
+                   android:gravity="center_horizontal"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+                   <ImageView
+                       android:id="@+id/iv_shop"
+                       android:src="@mipmap/sl_unselect_shop"
+                       android:layout_width="22dp"
+                       android:layout_height="22dp" />
+                   <TextView
+                       android:layout_marginTop="3dp"
+                       android:textSize="10sp"
+                       android:textColor="@color/color_333"
+                       android:text="严选商城"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content" />
+               </LinearLayout>
+           </RelativeLayout>
+           <RelativeLayout
+               android:id="@+id/rl_center"
+               android:layout_weight="1"
+               android:layout_width="0dp"
+               android:layout_height="match_parent">
+               <ImageView
+                   android:layout_centerHorizontal="true"
+                   android:src="@mipmap/sl_center"
+                   android:layout_width="45dp"
+                   android:layout_height="45dp" />
+           </RelativeLayout>
+           <RelativeLayout
+               android:id="@+id/rl_college"
+               android:layout_weight="1"
+               android:layout_width="0dp"
+               android:layout_height="match_parent">
+               <LinearLayout
+                   android:layout_centerInParent="true"
+                   android:orientation="vertical"
+                   android:gravity="center_horizontal"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+                   <ImageView
+                       android:id="@+id/iv_college"
+                       android:src="@mipmap/sl_unselect_college"
+                       android:layout_width="22dp"
+                       android:layout_height="22dp" />
+                   <TextView
+                       android:layout_marginTop="3dp"
+                       android:textSize="10sp"
+                       android:textColor="@color/color_333"
+                       android:text="商学院"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content" />
+               </LinearLayout>
+           </RelativeLayout>
+           <RelativeLayout
+               android:id="@+id/rl_mine"
+               android:layout_weight="1"
+               android:layout_width="0dp"
+               android:layout_height="match_parent">
+               <LinearLayout
+
+                   android:layout_centerInParent="true"
+                   android:orientation="vertical"
+                   android:gravity="center_horizontal"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+                   <ImageView
+                       android:id="@+id/iv_mine"
+                       android:src="@mipmap/sl_unselect_mine"
+                       android:layout_width="22dp"
+                       android:layout_height="22dp" />
+                   <TextView
+                       android:layout_marginTop="3dp"
+                       android:textSize="10sp"
+                       android:textColor="@color/color_333"
+                       android:text="我的"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content" />
+               </LinearLayout>
+           </RelativeLayout>
+       </LinearLayout>
+   </RelativeLayout>
+
+</RelativeLayout>

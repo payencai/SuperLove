@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="color_333">#333333</color>
+    <color name="color_kill">#343434</color>
+    <color name="color_red">#F92732</color>
+    <color name="color_white">#ffffff</color>
+    <color name="color_74">#747474</color>
+    <color name="color_47">#474747</color>
+    <color name="color_red2">#FFF5454C</color>
+    <color name="color_blue">#FF458FF5</color>
+    <color name="color_yellow">#FFF59D45</color>
+    <color name="color_blue2">#FF21C0D5</color>
+    <color name="color_perple">#FF8F50E3</color>
+    <color name="color_6e">#6e6e6e</color>
+    <color name="color_f5">#f5f5f5</color>
+    <color name="color_trans">#00000000</color>
+    <color name="color_black">#000000</color>
+    <color name="color_balance_bg">#eac88b</color>
+    <color name="color_new">#FFFC4738</color>
+    <color name="color_hot">#FFff363e</color>
+    <color name="color_red3">#FFE83732</color>
+    <color name="color_red4">#FE3F49</color>
+    <color name="color_b5">#FFb5b5b5</color>
+    <color name="color_category1">#82C0E4</color>
+    <color name="color_category2">#F89776</color>
+    <color name="color_category3">#87D992</color>
+    <color name="color_category4">#FF766A</color>
+    <color name="color_category5">#C8B2DB</color>
+    <color name="color_category6">#F8B717</color>
+    <color name="color_category7">#A1B246</color>
+    <color name="color_category8">#839FA7</color>
+</resources>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="12dp"
+    android:layout_marginLeft="12dp"
+    android:background="@drawable/shape_home_white8"
+    android:layout_width="match_parent"
+    android:layout_height="110dp">
+    <RelativeLayout
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@id/iv_logo"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:textStyle="bold"
+            android:textColor="@color/color_333"
+            android:textSize="15sp"
+            android:text="新手指南丨营销思路及打法解析营销思路及打法营销解析"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                
+                android:textSize="13sp"
+                android:textColor="#838383"
+                android:text="2019-09-30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@mipmap/sl_college_zan"
+                    android:layout_width="14sp"
+                    android:layout_height="14sp" />
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:textSize="13sp"
+                    android:textColor="#838383"
+                    android:text="2000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+    <ImageView
+        android:scaleType="centerCrop"
+        android:src="@mipmap/sl_college_demo1"
+        android:layout_centerVertical="true"
+        android:id="@+id/iv_logo"
+        android:layout_alignParentRight="true"
+        android:layout_width="108dp"
+        android:layout_height="90dp" />
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/white"
+    android:paddingRight="8dp"
+    android:paddingLeft="8dp"
+    android:layout_width="wrap_content"
+    android:layout_height="44dp">
+    <com.coorchice.library.SuperTextView
+        android:text="玩具乐器"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:stv_corner="4dp"
+        android:id="@+id/tv_name"
+        android:paddingLeft="5dp"
+        app:stv_solid="#FFF92732"
+        android:paddingRight="5dp"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp" />
+</LinearLayout>

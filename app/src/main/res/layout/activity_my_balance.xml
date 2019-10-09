@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.mine.MyBalanceActivity">
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@mipmap/sl_balance_bg1"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <ImageView
+                android:id="@+id/iv_back"
+                android:padding="15dp"
+                android:src="@mipmap/sl_grey_back"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+            <TextView
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/color_333"
+                android:text="我的收益"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+
+                        android:textStyle="bold"
+                        android:textSize="26sp"
+                        android:textColor="#FF7B572C"
+                        android:text="0"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        android:textColor="#FF7B572C"
+                        android:text="累计总收益(元)"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </RelativeLayout>
+            <View
+                android:background="#7B572C"
+                android:layout_width="1dp"
+                android:layout_height="40dp"></View>
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textStyle="bold"
+                        android:textSize="26sp"
+                        android:textColor="#FF7B572C"
+                        android:text="0"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        android:textColor="#FF7B572C"
+                        android:text="待结算(元)"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <com.flyco.tablayout.SlidingTabLayout
+        android:id="@+id/tab_type"
+
+        android:paddingBottom="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@mipmap/sl_balance_bg2"
+        app:tl_indicator_color="#FF7B572C"
+        app:tl_indicator_height="2dp"
+        app:tl_indicator_width="26dp"
+        app:tl_textBold="SELECT"
+        app:tl_indicator_width_equal_title="false"
+        app:tl_tab_space_equal="true"
+        app:tl_textSelectColor="#FF7B572C"
+        app:tl_textUnselectColor="#807B572C"
+        app:tl_textsize="16sp" />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+</LinearLayout>

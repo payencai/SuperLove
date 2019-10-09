@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/shape_home_white8"
+    android:layout_width="wrap_content"
+    android:layout_marginLeft="6dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:scaleType="fitXY"
+        android:src="@drawable/sl_kill_good1"
+        android:layout_width="match_parent"
+        android:layout_height="167dp" />
+    <LinearLayout
+        android:paddingLeft="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@mipmap/sl_category_tianmao"
+                android:layout_width="17dp"
+                android:layout_height="17dp" />
+            <TextView
+                android:textColor="@color/color_333"
+                android:textStyle="bold"
+                android:textSize="14sp"
+
+                android:text="      新生儿礼盒套装春秋夏季刚出生男女宝宝满月礼盒套装…."
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <LinearLayout
+
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="￥"
+                        android:textColor="@color/color_red"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="bottom"
+                        android:text="168.8"
+                        android:textColor="@color/color_red"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_marginBottom="1dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="￥218.80"
+                    android:textColor="#979797"
+                    android:textSize="13sp" />
+            </LinearLayout>
+            <TextView
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:textSize="13sp"
+                android:textColor="@color/color_6e"
+                android:text="已售22150"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RelativeLayout
+
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="3dp"
+                        android:gravity="center"
+                        android:textSize="10sp"
+                        android:paddingRight="5dp"
+                        android:background="@drawable/shape_goods_plus"
+                        android:textColor="#FFF5DDAE"
+                        android:text="PLUS会员"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:paddingRight="3dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="5dp"
+                        android:gravity="center"
+                        android:textSize="10sp"
+                        android:background="@drawable/shape_goods_money"
+                        android:textColor="#FF3E3D46"
+                        android:text="赚￥32.8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

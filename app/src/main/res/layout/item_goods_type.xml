@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:stv="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginLeft="5dp"
+    android:gravity="center_horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/iv_goods"
+        android:src="@drawable/sl_shop_good1"
+        android:layout_width="75dp"
+        android:layout_height="75dp" />
+    <com.coorchice.library.SuperTextView
+        android:text="运动户外"
+        android:id="@+id/tv_name"
+        android:textSize="11sp"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp"
+        android:paddingRight="8dp"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="8dp"
+        app:stv_corner="@dimen/dp_10"
+        android:textColor="@color/color_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:stv_solid="@color/color_red"
+
+        />
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ui.college.CollegeFragment">
+
+    <RelativeLayout
+        android:background="@drawable/sl_college_bg"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <com.love.novalue.widget.barrage.BarrageView
+            android:id="@+id/danmu"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_above="@+id/tab_type"
+            />
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/tab_type"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/color_trans"
+            app:tl_indicator_color="@color/color_white"
+            app:tl_indicator_height="3dp"
+            app:tl_indicator_width="26dp"
+            app:tl_textBold="SELECT"
+            app:tl_indicator_width_equal_title="false"
+            app:tl_tab_space_equal="true"
+            app:tl_textSelectColor="@color/color_white"
+            app:tl_textUnselectColor="#80ffffff"
+            app:tl_textsize="16sp" />
+    </RelativeLayout>
+    <com.love.novalue.widget.CustomScrollViewPager
+        android:layout_width="match_parent"
+        android:id="@+id/viewpager"
+        android:layout_height="match_parent">
+
+    </com.love.novalue.widget.CustomScrollViewPager>
+
+</LinearLayout>

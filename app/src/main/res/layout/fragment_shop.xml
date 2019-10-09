@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.home.HomeFragment">
+    <RelativeLayout
+        android:background="@color/color_red"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+        <ImageView
+            android:id="@+id/iv_ear"
+            android:layout_marginLeft="@dimen/sp_12"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/sl_white_earphone"
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+        <FrameLayout
+            android:id="@+id/rl_msg"
+            android:layout_marginRight="@dimen/sp_12"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="35dp"
+            android:layout_height="35dp">
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@mipmap/sl_white_msg"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+            <TextView
+
+                android:gravity="center"
+                android:textSize="10sp"
+                android:textColor="@color/color_white"
+                android:text="10"
+                android:background="@drawable/shape_circle_notice"
+                android:layout_gravity="right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
+        <LinearLayout
+            android:id="@+id/ll_search"
+            android:gravity="center_vertical"
+            android:background="@drawable/shape_search_white"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/rl_msg"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/iv_ear"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+            <ImageView
+                android:layout_marginLeft="14dp"
+                android:src="@mipmap/sl_home_search"
+                android:layout_width="14dp"
+                android:layout_height="14dp" />
+            <TextView
+                android:layout_marginLeft="7dp"
+                android:textSize="14sp"
+                android:textColor="@color/color_74"
+                android:gravity="center"
+                android:text="搜索您想要的商品..."
+                android:background="@color/color_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:layout_width="match_parent"
+            android:scrollbars="none"
+            android:layout_height="match_parent">
+            <com.scwang.smartrefresh.layout.header.ClassicsHeader
+                android:layout_width="match_parent"
+                app:srlAccentColor="@android:color/white"
+                app:srlClassicsSpinnerStyle="Scale"
+                app:srlPrimaryColor="@color/color_red"
+                android:layout_height="wrap_content">
+            </com.scwang.smartrefresh.layout.header.ClassicsHeader>
+            <com.taoxu.library.StickyScrollView
+                android:overScrollMode="never"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:background="#f5f5f5"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <FrameLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp">
+                        <View
+                            android:background="@mipmap/sl_bg_home"
+                            android:layout_width="match_parent"
+                            android:layout_height="110dp"></View>
+                        <com.youth.banner.Banner
+                            android:layout_marginTop="10dp"
+                            app:scroll_time="500"
+                            app:indicator_margin="5dp"
+                            app:indicator_height="5dp"
+                            app:indicator_width="20dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginLeft="12dp"
+                            app:indicator_drawable_unselected="@drawable/bg_banner_unselect"
+                            android:id="@+id/banner"
+                            app:indicator_drawable_selected="@drawable/bg_banner_select"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            app:is_auto_play="true" />
+                    </FrameLayout>
+                    <RelativeLayout
+                        android:id="@+id/rl_balance"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="6dp"
+                        android:layout_marginLeft="6dp"
+                        android:background="@mipmap/sl_bg_register"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp">
+                        <LinearLayout
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginLeft="110dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+
+                                android:textSize="14sp"
+                                android:text="平台分红"
+                                android:textColor="#FFF8DF87"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:textSize="20sp"
+                                android:text="￥11.88888888"
+                                android:textColor="#FFFFE997"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <com.love.novalue.widget.MyGridView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/gv_hot"
+                        android:visibility="gone"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:verticalSpacing="10dp"
+                        android:background="@color/color_f5"
+                        android:numColumns="2"
+                        android:horizontalSpacing="10dp"
+                        tools:listitem="@layout/item_shop_hot"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </com.love.novalue.widget.MyGridView>
+                    <LinearLayout
+                        android:paddingBottom="10dp"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/shape_home_white8"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:layout_margin="8dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_centerVertical="true"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                android:textColor="#FFFE3F49"
+                                android:text="精选分类"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <LinearLayout
+                                android:id="@+id/ll_category"
+                                android:layout_centerVertical="true"
+                                android:gravity="center_vertical"
+                                android:layout_alignParentRight="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:textSize="12sp"
+                                    android:textColor="#FF959394"
+                                    android:text="查看全部"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                                <ImageView
+                                    android:layout_marginLeft="5dp"
+                                    android:src="@mipmap/sl_circle_right"
+                                    android:layout_width="11dp"
+                                    android:layout_height="11dp" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                        <android.support.v7.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            tools:itemCount="1"
+                            android:id="@+id/rv_type"
+                            tools:listitem="@layout/item_goods_type"
+                            android:layout_height="wrap_content">
+
+                        </android.support.v7.widget.RecyclerView>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="6dp"
+                        android:layout_marginLeft="6dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/sl_plus"
+                        android:layout_width="match_parent"
+                        android:layout_height="88dp" />
+                    <LinearLayout
+                        android:background="#f5f5f5"
+                        android:tag="sticky"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:gravity="center_vertical">
+                            <View
+                                android:layout_marginLeft="12dp"
+                                android:background="@color/color_red"
+                                android:layout_width="4dp"
+                                android:layout_height="19dp"></View>
+                            <TextView
+                                android:textStyle="bold"
+                                android:id="@+id/tv_miaosha"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:text="限时秒杀"
+                                android:textColor="@color/color_kill"
+                                android:textSize="16sp" />
+
+
+                            <LinearLayout
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center_vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tv_miaosha_shi"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:background="@drawable/shape_miaosha_time"
+                                    android:gravity="center"
+                                    android:text="12"
+                                    android:textColor="#ffffffff"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:textColor="@color/color_red"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="3dp"
+                                    android:text=":" />
+
+                                <TextView
+                                    android:id="@+id/tv_miaosha_minter"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:background="@drawable/shape_miaosha_time"
+                                    android:gravity="center"
+                                    android:text="12"
+                                    android:textColor="#ffffffff"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="3dp"
+                                    android:textColor="@color/color_red"
+                                    android:text=":" />
+
+                                <TextView
+                                    android:id="@+id/tv_miaosha_second"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:background="@drawable/shape_miaosha_time"
+                                    android:gravity="center"
+                                    android:text="10"
+                                    android:textColor="#ffffffff"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+
+                            android:background="#f5f5f5"
+                            android:tag="sticky"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <com.love.novalue.widget.MyGridView
+                                android:numColumns="4"
+                                android:id="@+id/gv_kill"
+                                tools:listitem="@layout/item_kill_time"
+                                android:background="#f5f5f5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                            </com.love.novalue.widget.MyGridView>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <android.support.v7.widget.RecyclerView
+                        tools:itemCount="1"
+
+                        android:id="@+id/rv_goods"
+                        tools:listitem="@layout/item_shop_goods"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </android.support.v7.widget.RecyclerView>
+                </LinearLayout>
+            </com.taoxu.library.StickyScrollView>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_shopcar"
+            android:background="@mipmap/sl_shopcar"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_gravity="right|bottom"
+            android:layout_width="52dp"
+            android:layout_height="52dp">
+            <TextView
+
+                android:gravity="center"
+                android:text="10"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:layout_marginRight="7dp"
+                android:layout_marginTop="9dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/shape_circle_red"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+        </RelativeLayout>
+    </FrameLayout>
+
+
+
+</LinearLayout>

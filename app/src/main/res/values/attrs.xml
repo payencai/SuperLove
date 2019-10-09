@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="VerCodeInputView">
+        <attr name="inputNum" format="integer" />
+        <attr name="inputTxtColor" format="color" />
+        <attr name="inputWidth" format="dimension" />
+        <attr name="inputPadding" format="dimension" />
+        <attr name="inputTxtSize" format="dimension" />
+        <attr name="inputBg" format="reference" />
+        <attr name="android:inputType" />
+
+    </declare-styleable>
+    <declare-styleable name="ArcGradualView">
+        <attr name="color_gradual_start" format="color" />
+        <attr name="color_gradual_end" format="color" />
+        <attr name="height_arc" format="dimension" />
+        <attr name="gradual_or">
+            <!--水平方向-->
+            <enum name="orizontal" value="0" />
+            <!--垂直方向-->
+            <enum name="vertical" value="1" />
+            <!--对角线45-->
+            <enum name="angles45" value="2" />
+            <!--对角线135-->
+            <enum name="angles135" value="3" />
+        </attr>
+        <attr name="color_other_arc" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="StepView">
+        <attr name="svCircleColor" format="color" />
+        <attr name="svTextColor" format="color" />
+        <attr name="svSelectedColor" format="color" />
+        <attr name="svFillRadius" format="dimension" />
+        <attr name="svStrokeWidth" format="dimension" />
+        <attr name="svLineWidth" format="dimension" />
+        <attr name="svTextSize" format="dimension" />
+        <attr name="svDrawablePadding" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="ShadowView">
+        <attr name="containerShadowColor" format="color"/>
+        <attr name="containerShadowRadius" format="dimension"/>
+        <attr name="containerDeltaLength" format="dimension"/>
+        <attr name="containerCornerRadius" format="dimension"/>
+        <attr name="deltaX" format="dimension"/>
+        <attr name="deltaY" format="dimension"/>
+        <attr name="enable" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="StickyScrollView">
+        <attr name="stuckShadowHeight" format="dimension" />
+        <attr name="stuckShadowDrawable" format="reference" />
+    </declare-styleable>
+
+</resources>

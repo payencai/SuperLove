@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.maning0303:MNImageBrowser:V1.2.4@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/53c1ef5528334a993dd2725dfc2f32e9/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/53c1ef5528334a993dd2725dfc2f32e9/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.maning0303/MNImageBrowser/V1.2.4/97f82a4a2b97756581f1e7767cf9045e09c58f34/MNImageBrowser-V1.2.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

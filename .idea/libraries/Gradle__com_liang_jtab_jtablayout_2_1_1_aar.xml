@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.liang.jtab:jtablayout:2.1.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/922e7aa2c697f638347c5434e35d158f/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/922e7aa2c697f638347c5434e35d158f/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.liang.jtab/jtablayout/2.1.1/f268de2152cd8d8865b2f1991976e0a73a2b4ad1/jtablayout-2.1.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

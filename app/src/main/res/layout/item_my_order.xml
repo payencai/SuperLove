@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@drawable/shape_home_white8"
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="12dp"
+    android:layout_marginTop="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="13sp"
+            android:textColor="@color/color_333"
+            android:text="2019-08-19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_alignParentRight="true"
+            android:textSize="13sp"
+            android:textColor="#FE3F49"
+            android:text="待付款"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        tools:listitem="@layout/item_order_child"
+        android:layout_width="match_parent"
+        tools:itemCount="2"
+        android:id="@+id/rv_child"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+    <View
+        android:layout_marginTop="15dp"
+        android:background="#f0f0f0"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></View>
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="12sp"
+                android:textColor="@color/color_6e"
+                android:text="共3件商品 合计: "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textSize="11sp"
+                android:textColor="@color/color_333"
+                android:text="￥"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textSize="16sp"
+                android:textColor="@color/color_333"
+                android:text="156"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_gravity="right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.coorchice.library.SuperTextView
+            app:stv_solid="@color/white"
+            android:layout_width="77dp"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:text="取消订单"
+            app:stv_corner="14dp"
+            android:visibility="gone"
+            android:textColor="@color/color_6e"
+            app:stv_stroke_color="#6E6E6E"
+            app:stv_stroke_width="1dp"
+            android:layout_height="27dp" />
+        <com.coorchice.library.SuperTextView
+            app:stv_solid="@color/white"
+            android:layout_width="77dp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_marginLeft="12dp"
+            android:textSize="13sp"
+            android:text="查看物流"
+            app:stv_corner="14dp"
+            android:textColor="@color/color_6e"
+            app:stv_stroke_color="#6E6E6E"
+            app:stv_stroke_width="1dp"
+            android:layout_height="27dp" />
+        <com.coorchice.library.SuperTextView
+            app:stv_solid="#FE3F49"
+            android:visibility="gone"
+            android:layout_width="77dp"
+            android:gravity="center"
+            android:layout_marginLeft="12dp"
+            android:textSize="13sp"
+            android:text="确认收货"
+            app:stv_corner="14dp"
+            android:textColor="@color/white"
+            app:stv_stroke_color="#6E6E6E"
+            app:stv_stroke_width="1dp"
+            android:layout_height="27dp" />
+    </LinearLayout>
+</LinearLayout>

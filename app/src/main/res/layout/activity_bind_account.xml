@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.login.LoginActivity">
+    <ImageView
+        android:padding="15dp"
+
+        android:src="@mipmap/sl_grey_back"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+    <LinearLayout
+
+        android:orientation="vertical"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="18sp"
+            android:textColor="@color/color_333"
+
+            android:text="授权绑定"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginTop="80dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.coorchice.library.SuperTextView
+                android:textColor="@color/white"
+                app:stv_corner="22dp"
+                android:text="爱无价"
+                app:stv_shaderEnable="true"
+                app:stv_shaderStartColor="#FFF52E4E"
+                app:stv_shaderEndColor="#FFF77584"
+                android:gravity="center"
+                android:textSize="16sp"
+
+                android:layout_width="220dp"
+                android:layout_height="42dp" />
+            <com.coorchice.library.SuperTextView
+                android:textColor="@color/white"
+                app:stv_corner="22dp"
+                android:text="肽精彩"
+                android:layout_marginTop="28dp"
+                app:stv_shaderEnable="true"
+                app:stv_shaderStartColor="#FFB072E1"
+                app:stv_shaderEndColor="#FFBF8FE6"
+                android:gravity="center"
+                android:textSize="16sp"
+
+                android:layout_width="220dp"
+                android:layout_height="42dp" />
+            <com.coorchice.library.SuperTextView
+                android:textColor="@color/white"
+                app:stv_corner="22dp"
+                android:layout_marginTop="28dp"
+                android:text="MTI"
+                app:stv_shaderEnable="true"
+                app:stv_shaderStartColor="#FF64CEF9"
+                app:stv_shaderEndColor="#FF32C3F8"
+                android:gravity="center"
+                android:textSize="16sp"
+
+                android:layout_width="220dp"
+                android:layout_height="42dp" />
+            <com.coorchice.library.SuperTextView
+                android:textColor="@color/white"
+                app:stv_corner="22dp"
+                android:text="双创新零售"
+                android:layout_marginTop="28dp"
+                app:stv_shaderEnable="true"
+                app:stv_shaderStartColor="#FF656DF7"
+                app:stv_shaderEndColor="#FF979AFC"
+                android:gravity="center"
+                android:textSize="16sp"
+
+                android:layout_width="220dp"
+                android:layout_height="42dp" />
+            <com.coorchice.library.SuperTextView
+                android:textColor="#FFFE3F49"
+                app:stv_corner="22dp"
+                android:text="跳过"
+                android:layout_marginTop="28dp"
+                app:stv_solid="@color/white"
+                app:stv_stroke_width="1dp"
+                app:stv_stroke_color="#FFFE3F49"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:layout_width="220dp"
+                android:layout_height="42dp" />
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

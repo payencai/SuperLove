@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.ryan.rv_gallery.GalleryRecyclerView
+            android:id="@+id/rv_list"
+            android:layout_marginBottom="40dp"
+            tools:listitem="@layout/view_card_item"
+            android:layout_above="@id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:helper="PagerSnapHelper" />
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:background="@drawable/shape_pay_method"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+            <HorizontalScrollView
+                android:scrollbars="none"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+                <LinearLayout
+
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+                    <LinearLayout
+                        android:layout_marginLeft="15dp"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@mipmap/sl_share_save"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/color_333"
+                            android:textSize="12sp"
+                            android:text="保存图片"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginLeft="30dp"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@mipmap/sl_share_wechat"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/color_333"
+                            android:textSize="12sp"
+                            android:text="微信好友"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_marginLeft="30dp"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@mipmap/sl_share_circle"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/color_333"
+                            android:textSize="12sp"
+                            android:text="朋友圈"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_marginLeft="30dp"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@mipmap/sl_share_qq"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/color_333"
+                            android:textSize="12sp"
+                            android:text="QQ好友"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <LinearLayout
+
+                        android:gravity="center"
+                        android:layout_marginLeft="30dp"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@mipmap/sl_share_zone"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/color_333"
+                            android:textSize="12sp"
+                            android:text="QQ空间"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_marginLeft="30dp"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@mipmap/sl_share_blog"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/color_333"
+                            android:textSize="12sp"
+                            android:text="微博"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+            <View
+                android:background="#f5f5f5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"></View>
+            <TextView
+                android:textSize="16sp"
+                android:textColor="@color/color_333"
+                android:gravity="center"
+                android:text="取消"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

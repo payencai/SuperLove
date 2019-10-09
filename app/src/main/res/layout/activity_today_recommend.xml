@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f5"
+    tools:context=".ui.home.category.JuhuasuanActivity">
+    <FrameLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@mipmap/sl_today_bg"
+            android:layout_width="match_parent"
+            android:layout_height="160dp">
+            <RelativeLayout
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <ImageView
+                    android:padding="15dp"
+                    android:src="@mipmap/sl_white_back"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/white"
+                    android:textSize="21sp"
+                    android:text="今日推荐"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_marginTop="80dp"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.youth.banner.Banner
+
+                    app:scroll_time="500"
+                    app:indicator_margin="5dp"
+                    app:indicator_height="5dp"
+                    app:indicator_width="20dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginLeft="12dp"
+                    app:indicator_drawable_unselected="@drawable/bg_banner_unselect"
+                    android:id="@+id/banner"
+                    app:indicator_drawable_selected="@drawable/bg_banner_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    app:is_auto_play="true" />
+                <LinearLayout
+
+
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    >
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:gravity="center_vertical"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+
+                                android:textSize="15sp"
+                                android:textColor="@color/color_red"
+                                android:text="综合"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <ImageView
+                                android:layout_marginLeft="4dp"
+                                android:src="@mipmap/sl_red_down"
+                                android:layout_width="8dp"
+                                android:layout_height="5dp" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <LinearLayout
+                            android:gravity="center_vertical"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+
+                                android:textSize="15sp"
+                                android:textColor="@color/color_333"
+                                android:text="销量"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <ImageView
+                                android:layout_marginLeft="4dp"
+                                android:src="@mipmap/sl_category_up"
+                                android:layout_width="13dp"
+                                android:layout_height="15dp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <LinearLayout
+                            android:gravity="center_vertical"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+
+                                android:textSize="15sp"
+                                android:textColor="@color/color_333"
+                                android:text="价格"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <ImageView
+                                android:layout_marginLeft="4dp"
+                                android:src="@mipmap/sl_price_down"
+                                android:layout_width="13dp"
+                                android:layout_height="15dp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+
+
+
+                </LinearLayout>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_goods"
+                    tools:itemCount="1"
+                    tools:listitem="@layout/item_taobao_like"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </FrameLayout>
+</LinearLayout>

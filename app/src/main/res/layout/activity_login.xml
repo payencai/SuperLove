@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.login.LoginActivity">
+    <ImageView
+        android:layout_margin="20dp"
+        android:src="@mipmap/sl_login_close"
+        android:layout_width="19dp"
+        android:layout_height="19dp" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@mipmap/sl_app_logo"
+            android:layout_width="90dp"
+            android:layout_height="90dp" />
+        <TextView
+            android:layout_marginTop="25dp"
+            android:textColor="#838383"
+            android:textSize="16sp"
+            android:text="真爱生活  享受无价"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:background="@drawable/shape_login_yellow"
+            android:gravity="center"
+            android:layout_marginTop="80dp"
+            android:layout_width="240dp"
+            android:layout_height="45dp">
+            <ImageView
+                android:src="@mipmap/sl_register"
+                android:layout_width="22dp"
+                android:layout_height="22dp" />
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:text="立即注册"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:background="@drawable/shape_login_red"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_width="240dp"
+            android:layout_height="45dp">
+            <ImageView
+                android:src="@mipmap/sl_login"
+                android:layout_width="22dp"
+                android:layout_height="22dp" />
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:text="手机登录"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+
+            android:textSize="12sp"
+            android:textColor="@color/color_333"
+            android:text=" 注册或登录代表同意"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="12sp"
+                android:textColor="#FF348AFF"
+                android:text="《用户协议》"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textSize="12sp"
+                android:textColor="@color/color_333"
+                android:text="及"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textSize="12sp"
+                android:textColor="#FF348AFF"
+                android:text="《隐私政策》 "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.love.novalue"
+    tools:overrideLibrary="com.github.nikartm.support">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+
+    <application
+        android:name=".MyApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.mine.LoveOrderDetailActivity"></activity>
+        <activity
+            android:name=".ui.mine.LoveOrderActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".ui.mine.AddApplyActivity" />
+        <activity android:name=".ui.mine.ApplyAfterSaleActivity" />
+        <activity android:name=".ui.mine.MyOrderActivity" />
+        <activity android:name=".ui.home.ShareGoodsActivity" />
+        <activity android:name=".ui.college.CollegeArticleActivity" />
+        <activity android:name=".ui.SeePhotoActivity" />
+        <activity android:name=".ui.login.LoginQrcodeActivity" />
+        <activity android:name=".ui.login.BindLoveActivity" />
+        <activity android:name=".ui.login.BindAccountActivity" />
+        <activity android:name=".ui.login.SetPasswordActivity" />
+        <activity android:name=".ui.login.RegisterActivity" />
+        <activity android:name=".ui.login.LoveLoginActivity" />
+        <activity android:name=".ui.login.ForgetPasswordActivity" />
+        <activity android:name=".ui.login.OtherLoginActivity" />
+        <activity android:name=".ui.login.LocalLoginActivity" />
+        <activity android:name=".ui.login.LoginActivity" />
+        <activity android:name=".x5.WebviewActivity" />
+        <activity android:name=".ui.home.category.JdGoodsActivity" />
+        <activity android:name=".ui.home.category.PinduoduoActivity" />
+        <activity android:name=".ui.home.category.NineMoneyActivity" />
+        <activity android:name=".ui.home.category.TodayHotActivity" />
+        <activity android:name=".ui.home.category.TodayRecommendActivity" />
+        <activity android:name=".ui.home.category.YoukaActivity" />
+        <activity android:name=".ui.home.category.ChongzhiActivity" />
+        <activity android:name=".ui.home.category.JuhuasuanActivity" />
+        <activity
+            android:name=".ui.home.category.TaobaoActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".ui.home.HomeType4Activity" />
+        <activity android:name=".ui.home.HomeType3Activity" />
+        <activity android:name=".ui.home.HomeType2Activity" />
+        <activity android:name=".ui.home.HomeGoodsDetailActivity" />
+        <activity android:name=".ui.shop.ShopDetailActivity" />
+        <activity android:name=".ui.shop.MyAddressActivity" />
+        <activity android:name=".ui.shop.PaySuccessActivity" />
+        <activity android:name=".ui.shop.OrderConfirmActivity" />
+        <activity android:name=".ui.shop.HotGoodsActivity" />
+        <activity android:name=".ui.shop.ShopCategoryActivity" />
+        <activity android:name=".ui.shop.NewGoodsActivity" />
+        <activity android:name=".ui.mine.MyBalanceActivity" />
+        <activity android:name=".ui.shop.ShopCarActivity" />
+        <activity android:name=".ui.home.HomeSearchActivity" />
+        <activity android:name=".ui.shop.ShopSearchResultActivity" />
+        <activity android:name=".ui.shop.ShopSearchActivity" />
+        <activity android:name=".ui.home.CategoryDetailActivity" />
+        <activity android:name=".ui.home.GoodsCategoryActivity" />
+        <activity android:name=".ui.home.HomeMsgActivity" />
+        <activity android:name=".ui.home.HomeType1Activity" />
+        <activity android:name=".ui.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

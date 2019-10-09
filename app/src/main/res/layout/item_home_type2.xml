@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="10dp"
+
+    android:background="@drawable/shape_home_white8"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:background="@drawable/shape_type2"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/iv_img"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+            <LinearLayout
+                android:id="@+id/ll_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.coorchice.library.SuperTextView
+                    android:paddingLeft="6dp"
+                    android:textColor="@color/white"
+                    android:paddingRight="6dp"
+                    android:text="工厂直供"
+                    app:stv_corner="6dp"
+                    android:textSize="12sp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    app:stv_solid="#FFFF8A15"
+                    app:stv_left_top_corner="true"
+                    app:stv_left_bottom_corner="false"
+                    app:stv_right_top_corner="false"
+                    app:stv_right_bottom_corner="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/color_6e"
+                    android:textSize="13sp"
+                    android:text="持久保温丨轻巧"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <TextView
+                android:layout_below="@id/ll_top"
+                android:textColor="@color/color_333"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="男女通用便携迷你超轻可爱小巧保温水杯300ML"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_goods_plus"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="2dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="2dp"
+                    android:text="PLUS会员"
+                    android:textColor="#FFF5DDAE"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_goods_money"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="2dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="2dp"
+                    android:text="赚￥32.8"
+                    android:textColor="#FF3E3D46"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/iv_img"
+            android:layout_alignParentRight="true"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sl_shop_good8" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:paddingBottom="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp">
+
+
+
+
+        <RelativeLayout
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/ll_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="￥"
+                    android:textColor="@color/color_red"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="168.8"
+                    android:textColor="@color/color_red"
+                    android:textSize="20sp" />
+            </LinearLayout>
+            <TextView
+
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/ll_left"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="178.8"
+                android:textColor="#ababab"
+                android:textSize="14sp" />
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="已售1270%"
+                android:textColor="#FF6E6E6E"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical">
+            <LinearLayout
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:background="@drawable/shape_goods_yellow15"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp">
+                <ImageView
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/sl_shop_share"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp" />
+                <TextView
+                    android:layout_marginRight="12dp"
+                    android:textSize="@dimen/sp_14"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="#FF745831"
+                    android:text="PLUS会员分享赚 ￥32.8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <com.coorchice.library.SuperTextView
+                android:layout_width="88dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:paddingRight="5dp"
+                android:text="立即抢购"
+                app:stv_solid="#FFFE3F49"
+                app:stv_corner="18dp"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

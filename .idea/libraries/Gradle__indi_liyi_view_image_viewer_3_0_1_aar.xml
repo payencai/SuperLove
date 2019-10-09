@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: indi.liyi.view:image-viewer:3.0.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/19b4eb3ee49ce2498fa3eb3d67b7a2b4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/19b4eb3ee49ce2498fa3eb3d67b7a2b4/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/indi.liyi.view/image-viewer/3.0.1/7334f5e38938c9673cb1ee48bb7c347b6ad6b73d/image-viewer-3.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

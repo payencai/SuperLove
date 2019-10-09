@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.shop.PaySuccessActivity">
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/iv_back"
+            android:padding="15dp"
+            android:src="@mipmap/sl_black_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+        <TextView
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/color_333"
+            android:text="支付成功"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:paddingBottom="15dp"
+                android:background="@color/white"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_marginTop="20dp"
+                    android:src="@mipmap/sl_pay_success"
+                    android:layout_width="78dp"
+                    android:layout_height="78dp" />
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/color_333"
+                    android:text="订单支付成功"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:textSize="14sp"
+                    android:textColor="#444"
+                    android:text="感谢您的购买，我们会尽快为您处理"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_marginTop="15dp"
+                    android:gravity="bottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="18sp"
+                        android:textColor="#FFFE3F49"
+                        android:text="￥"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+
+                        android:textSize="28sp"
+                        android:textColor="#FE3F49"
+                        android:text="156"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <com.coorchice.library.SuperTextView
+                        app:stv_solid="@color/white"
+                        app:stv_stroke_width="1dp"
+                        app:stv_corner="16dp"
+                        android:gravity="center"
+                        android:textColor="@color/color_red"
+                        android:textSize="15sp"
+                        android:text="查看订单"
+                        app:stv_stroke_color="@color/color_red"
+                        android:layout_width="94dp"
+                        android:layout_height="32dp" />
+                    <com.coorchice.library.SuperTextView
+                        app:stv_solid="@color/color_red"
+                        app:stv_stroke_width="1dp"
+                        android:layout_marginLeft="54dp"
+                        app:stv_corner="16dp"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:text="返回首页"
+                        app:stv_stroke_color="@color/color_red"
+                        android:layout_width="94dp"
+                        android:layout_height="32dp" />
+                </LinearLayout>
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:background="#c4c4c4"
+                        android:layout_width="30dp"
+                        android:layout_height="1dp"></View>
+                    <TextView
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/color_red"
+                        android:textSize="17sp"
+                        android:text="为你推荐"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <View
+                        android:background="#c4c4c4"
+                        android:layout_width="30dp"
+                        android:layout_height="1dp"></View>
+                </LinearLayout>
+            </RelativeLayout>
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                tools:itemCount="1"
+                android:id="@+id/rv_goods"
+                tools:listitem="@layout/item_shopcar_goods"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+ 
+</LinearLayout>

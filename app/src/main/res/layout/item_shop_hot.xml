@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/shape_home_white8"
+    android:layout_width="match_parent"
+
+    android:padding="10dp"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/ll_hot"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:src="@mipmap/sl_hot_goods"
+                android:layout_width="15dp"
+                android:layout_height="15dp" />
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_marginLeft="5dp"
+                android:textSize="15sp"
+                android:textColor="#FF232323"
+                android:text="热卖商品"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_label"
+            android:layout_marginTop="4dp"
+            android:textSize="12sp"
+            android:textColor="#979797"
+            android:text=" 人气好物"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="72dp">
+                <ImageView
+                    android:id="@+id/iv_img1"
+
+                    android:src="@drawable/sl_good7"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="72dp">
+                <ImageView
+                    android:id="@+id/iv_img2"
+                    android:src="@drawable/sl_good6"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

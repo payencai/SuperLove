@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:background="@drawable/shape_home_white8"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+
+            android:textSize="14sp"
+            android:textColor="@color/color_333"
+            android:text="每日一鲜"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginLeft="6dp"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:paddingRight="3dp"
+            android:paddingLeft="3dp"
+            android:background="@drawable/shape_good_yellow"
+
+            android:textSize="12sp"
+            android:textColor="@color/color_white"
+            android:text="高利润"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView
+        android:layout_marginTop="4dp"
+        android:textSize="12sp"
+        android:textColor="@color/color_6e"
+        android:text="产地优选 美食钜惠"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/sl_goods3"
+            android:layout_width="65dp"
+            android:layout_height="65dp" />
+
+    </LinearLayout>
+</LinearLayout>
